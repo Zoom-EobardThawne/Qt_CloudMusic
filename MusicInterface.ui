@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MusicInterface</class>
+ <widget class="QMainWindow" name="MusicInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1661</width>
+    <height>904</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CatMusic</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MusicInterface
+{
+border-image: url(:/image/backgroud/morncolour (12).jpg);
+	
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="6,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,2">
+          <property name="spacing">
+           <number>101</number>
+          </property>
+          <property name="leftMargin">
+           <number>50</number>
+          </property>
+          <property name="rightMargin">
+           <number>50</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,15">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="pushButton_search">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#pushButton_search
+{
+	border-image: url(:/image/icon/sereach.png);
+}
+#pushButton_search:hover
+{
+	
+	border-image: url(:/image/icon-hover/sereach-hover.png);
+}
+#pushButton_search:pressed
+{
+	border-image: url(:/image/icon/sereach.png);
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit_search">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>222</width>
+                  <height>17</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#lineEdit_search
+{
+	border: 2px soild black;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255,50%);
+}
+</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="dragEnabled">
+                 <bool>false</bool>
+                </property>
+                <property name="placeholderText">
+                 <string>输入歌曲名/歌手名 </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTabWidget" name="tabWidget">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"> QTabWidget::pane { /* The tab widget frame */
+      border-top: 2px solid rgb(255, 85, 127);
+  }
+
+  QTabWidget::tab-bar {
+      alignment: center;
+  }
+
+  /* Style the tab using the tab sub-control. Note that
+      it reads QTabBar _not_ QTabWidget */
+  QTabBar::tab {
+	background-color: qlineargradient(spread:pad, x1:0.358, y1:0.341, x2:0.527, y2:0.857955, stop:0 rgba(235, 235, 235, 255), stop:1 rgba(0, 85, 255, 50%));
+
+      border: 2px solid rgb(99, 180 ,252);
+      border-bottom-color: rgb(99, 180 ,252); /* same as the pane color */
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      min-width: 18ex;
+	  min-height: 25px;
+      padding: 2px;
+  }
+
+  QTabBar::tab:selected, QTabBar::tab:hover {
+	background-color: qlineargradient(spread:pad, x1:0.358, y1:0.341, x2:0.527, y2:0.857955, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(255, 170, 127, 50%));
+  }
+
+  QTabBar::tab:selected {
+      border-color: rgb(99, 180 ,252);
+      border-bottom-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                  stop: 0.5 #e7e7e7, stop: 1.0 #fafafa); /* same as pane color */
+  }
+
+  QTabBar::tab:!selected {
+      margin-top: 2px; /* make non-selected tabs look smaller */
+  }</string>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="tab_online">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <attribute name="title">
+                <string>在线音乐</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <widget class="QTableWidget" name="tableWidget_onlineList">
+                  <property name="styleSheet">
+                   <string notr="true">#tableWidget_onlineList{
+	background-color:rgba(255,255,255,50%);
+}</string>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string>id</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>picId</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>歌名</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>歌手</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>专辑</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_local">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <attribute name="title">
+                <string>本地音乐</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QTableWidget" name="tableWidget_localList">
+                  <property name="styleSheet">
+                   <string notr="true">#tableWidget_localList{
+	background-color:rgba(255,255,255,40%);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout" stretch="10,5,1">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2,1">
+              <property name="spacing">
+               <number>20</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>7</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="GraphicsView" name="graphicsView">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#graphicsView
+{
+	border: 5px soild black;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255,0%);
+}
+</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="textEdit_lyric">
+              <property name="font">
+               <font>
+                <family>华文楷体</family>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#textEdit_lyric
+{
+	border: 2px soild black;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255,50%);
+}
+</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>初听不知词中意,再听已是词中人~</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_currentTime">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>00:00</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="horizontalSlider_processBar">
+                <property name="styleSheet">
+                 <string notr="true">
+    QSlider::add-page:Horizontal
+     {     
+background-color: rgba(255, 255, 255,100);
+        height:4px;  
+     } 
+     QSlider::sub-page:Horizontal   
+    {  
+background-color: rgb(255, 255, 255);
+        height:4px;
+     }
+    QSlider::groove:Horizontal   
+    { 
+        background:transparent; 
+        height:4px;
+    }  
+    QSlider::handle:Horizontal  
+    { 
+        height:16px; 
+        width:16px; 
+	
+	
+	border-image: url(:/image/圆形 (7).png);
+  margin: -6 0px; 
+    }</string>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_endTime">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>00:00</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="styleSheet">
+           <string notr="true">border-top: 2px solid white; 
+</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="3,1">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>50</number>
+        </property>
+        <property name="rightMargin">
+         <number>50</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>1500</width>
+              <height>53</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSlider" name="verticalSlider_volume">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QSlider 
+    {  
+        background-color: rgba(255,255,255,0);
+        min-width:5px; 
+        max-width:5px;
+        border:15px solid rgba(255,255,255,0.2); 
+    }
+     QSlider::add-page:vertical
+     {      
+       
+	    background-color: rgb(250, 250, 0);
+        width:4px;
+     }
+     QSlider::sub-page:vertical  
+    { 
+        background-color: rgba(255,255,255,0.5); 
+        width:4px;
+     }
+    QSlider::groove:vertical 
+    {
+        background:transparent;
+        width:6px;
+    }
+    QSlider::handle:vertical 
+    {
+         height: 13px;
+        width:13px;
+ 
+ margin: -0 -4px; 
+	border-image: url(:/image/圆形 (10).png);
+     }</string>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="value">
+             <number>50</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>358</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>20</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="pushButton_playOrder">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#pushButton_playOrder
+{
+	
+	border-image: url(:/image/icon/loop-list.png);
+}
+#pushButton_playOrder:hover
+{
+	border-image: url(:/image/icon-hover/loop-list-hover.png);
+}
+#pushButton_playOrder:pressed
+{	
+	border-image: url(:/image/icon/loop-list.png);
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_playPre">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#pushButton_playPre
+{
+	border-image: url(:/image/icon/pre.png);
+}
+#pushButton_playPre:hover
+{
+	border-image: url(:/image/icon-hover/pre-hover.png);
+}
+#pushButton_playPre:pressed
+{
+	border-image: url(:/image/icon/pre.png);
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_play">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#pushButton_play
+{
+	border-image: url(:/image/icon/pase.png);
+}
+#pushButton_play:hover
+{
+	border-image: url(:/image/icon-hover/pase-hover.png);
+}
+#pushButton_play:pressed
+{
+	border-image: url(:/image/icon/pase.png);
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_playNext">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#pushButton_playNext
+{
+	border-image: url(:/image/icon/next.png);
+}
+#pushButton_playNext:hover
+{
+	border-image: url(:/image/icon-hover/next-hover.png);
+}
+#pushButton_playNext:pressed
+{
+	border-image: url(:/image/icon/next.png);
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>300</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_volume">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#pushButton_volume
+{
+	border-image: url(:/image/icon/music-voice.png);
+}
+#pushButton_volume:hover
+{
+	border-image: url(:/image/icon-hover/music-voice-hover.png);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1661</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>开启/关闭氛围灯</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>GraphicsView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

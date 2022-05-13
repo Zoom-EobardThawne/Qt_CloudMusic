@@ -1,0 +1,82 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/backgroud/morncolour (5).JPG</file>
+        <file>image/backgroud/morncolour (6).JPG</file>
+        <file>image/backgroud/morncolour (12).jpg</file>
+        <file>image/backgroud/morncolour (15).jpg</file>
+        <file>image/backgroud/morncolour (16).jpg</file>
+        <file>image/backgroud/morncolour (17).jpg</file>
+        <file>image/icon/add.png</file>
+        <file>image/icon/face.png</file>
+        <file>image/icon/Ilike.png</file>
+        <file>image/icon/Ilike1.png</file>
+        <file>image/icon/jump.png</file>
+        <file>image/icon/left.png</file>
+        <file>image/icon/left-arrow.png</file>
+        <file>image/icon/like.png</file>
+        <file>image/icon/list.png</file>
+        <file>image/icon/loop.png</file>
+        <file>image/icon/loop-list.png</file>
+        <file>image/icon/loop-one.png</file>
+        <file>image/icon/max.png</file>
+        <file>image/icon/min.png</file>
+        <file>image/icon/music.png</file>
+        <file>image/icon/music-voice.png</file>
+        <file>image/icon/next.png</file>
+        <file>image/icon/none-music.png</file>
+        <file>image/icon/ooopic_1520340986.ico</file>
+        <file>image/icon/pase.png</file>
+        <file>image/icon/play.png</file>
+        <file>image/icon/playlist.png</file>
+        <file>image/icon/play-random.png</file>
+        <file>image/icon/play-resently.png</file>
+        <file>image/icon/position.png</file>
+        <file>image/icon/pre.png</file>
+        <file>image/icon/quit.png</file>
+        <file>image/icon/right.png</file>
+        <file>image/icon/right-arrow.png</file>
+        <file>image/icon/sereach.png</file>
+        <file>image/icon/setting.png</file>
+        <file>image/icon/tr.png</file>
+        <file>image/icon/播放.png</file>
+        <file>image/icon/皮肤 (1).png</file>
+        <file>image/icon-hover/add-hover.png</file>
+        <file>image/icon-hover/Ilike1-hover.png</file>
+        <file>image/icon-hover/Ilike-hover.png</file>
+        <file>image/icon-hover/jump-hover.png</file>
+        <file>image/icon-hover/left-arrow-hover.png</file>
+        <file>image/icon-hover/left-light.png</file>
+        <file>image/icon-hover/like-hover.png</file>
+        <file>image/icon-hover/list-hover.png</file>
+        <file>image/icon-hover/loop-hover.png</file>
+        <file>image/icon-hover/loop-list-hover.png</file>
+        <file>image/icon-hover/loop-one-hover.png</file>
+        <file>image/icon-hover/music-hover.png</file>
+        <file>image/icon-hover/music-voice-hover.png</file>
+        <file>image/icon-hover/next-hover.png</file>
+        <file>image/icon-hover/none-music-hover.png</file>
+        <file>image/icon-hover/pase-hover.png</file>
+        <file>image/icon-hover/play-hover.png</file>
+        <file>image/icon-hover/playlist-hover.png</file>
+        <file>image/icon-hover/play-random-hover.png</file>
+        <file>image/icon-hover/play-resently-hover.png</file>
+        <file>image/icon-hover/position-hover.png</file>
+        <file>image/icon-hover/pre-hover.png</file>
+        <file>image/icon-hover/right-hover.png</file>
+        <file>image/icon-hover/sereach-hover.png</file>
+        <file>image/icon-hover/setting.png</file>
+        <file>image/圆形 (7).png</file>
+        <file>image/圆形 (8).png</file>
+        <file>image/圆形 (9).png</file>
+        <file>image/圆形 (10).png</file>
+        <file>image/圆形 (11).png</file>
+        <file>image/ooopic_1520340986.ico</file>
+        <file>image/backgroud/bg-imge01.png</file>
+        <file>image/circleMask.png</file>
+        <file>image/disk.png</file>
+        <file>image/icon.ico</file>
+        <file>image/magnetNeedle.png</file>
+        <file>image/Slider_handle.png</file>
+        <file>image/cp_z.png</file>
+    </qresource>
+</RCC>
